@@ -1,0 +1,252 @@
+/* ✅ فونت فارسی */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap');
+
+/* ✅ پس‌زمینه کلی */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    direction: rtl;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+}
+
+/* ✅ هدر */
+#header {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5, #00d2ff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    0% { background-position: 0% }
+    100% { background-position: 200% }
+}
+
+/* ✅ فرم */
+.form {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.form label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00d2ff;
+}
+
+/* ✅ اینپوت */
+.form-control {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 2px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 15px !important;
+    color: #fff !important;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1.2rem;
+    padding: 15px 20px !important;
+    transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.form-control:focus {
+    border-color: #00d2ff !important;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.3) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    outline: none;
+}
+
+/* ✅ خط جداکننده */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d2ff, transparent);
+    margin: 25px 0;
+}
+
+/* ✅ بخش پاسخ */
+h1.text-right {
+    font-weight: 700;
+    color: #a78bfa;
+    font-size: 1.5rem;
+}
+
+#see-answer {
+    display: block;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    min-height: 100px;
+    transition: all 0.3s ease;
+}
+
+#see-answer:hover {
+    border-color: rgba(0, 210, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+#see-answer i {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.2rem;
+}
+
+/* ✅ کارت جواب */
+#see-answer .mb-3 {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-right: 4px solid #00d2ff;
+    animation: fadeIn 0.5s ease;
+}
+
+#see-answer h5 {
+    color: #e2e8f0;
+    font-weight: 400;
+    line-height: 2;
+}
+
+#see-answer h3 {
+    margin-top: 10px;
+}
+
+/* ✅ بج جواب */
+.badge-success {
+    background: linear-gradient(135deg, #00b09b, #96c93d) !important;
+    font-size: 1.3rem !important;
+    padding: 12px 25px !important;
+    border-radius: 50px !important;
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 176, 155, 0.4);
+    animation: popIn 0.3s ease;
+}
+
+/* ✅ انیمیشن‌ها */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ✅ اسکرول بار زیبا */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#00d2ff, #3a7bd5);
+    border-radius: 10px;
+}
+
+/* ✅ انتخاب متن */
+::selection {
+    background: #00d2ff;
+    color: #0f0c29;
+}
+
+/* ✅ ریسپانسیو */
+@media (max-width: 768px) {
+    #header {
+        font-size: 1.8rem;
+    }
+
+    .form {
+        padding: 20px;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .badge-success {
+        font-size: 1rem !important;
+        padding: 10px 18px !important;
+    }
+
+    #see-answer {
+        padding: 15px;
+    }
+}
+
+/* ✅ لودینگ */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #00d2ff;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ✅ نتیجه‌ای پیدا نشد */
+.text-danger {
+    color: #ff6b6b !important;
+    font-size: 1.2rem;
+}
+
+/* ✅ کانتینر */
+.container {
+    max-width: 800px;
+    padding-bottom: 50px;
+}
+
+/* ✅ افکت ذرات پس‌زمینه */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 80%, rgba(0, 210, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
