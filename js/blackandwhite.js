@@ -58,10 +58,10 @@ function searcher(words, questions) {
             answer += `
                 <div class="mb-3">
                     <h5 class="text-right">${q.question}</h5>
-                    <hr>
                     <h3 class="text-center">
                         <span class="badge badge-success">${q.answer}</span>
                     </h3>
+                    <hr>
                 </div>
             `;
         }
