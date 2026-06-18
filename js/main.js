@@ -61,7 +61,6 @@ function searcher(words, questions) {
                     <h3 class="text-center">
                         <span class="badge badge-success">${q.answer}</span>
                     </h3>
-                    <hr>
                 </div>
             `;
         }
